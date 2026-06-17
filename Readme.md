@@ -7,12 +7,12 @@ The config is intentionally compact: it sets a few core editor defaults, install
 
 ## Features
 
-- **Lua-first setup**: `init.lua` loads modular configuration from `lua/config`.
-- **Automatic plugin manager bootstrap**: `lazy.nvim` is cloned automatically on first launch if it is not already installed.
 - **Nord color scheme**: uses `arcticicestudio/nord-vim` with true color support enabled.
 - **Line numbers**: absolute line numbers are enabled by default.
 - **80-column guide**: Neovim's `colorcolumn` is set to column `80`.
+- **Space leader key**: the global leader key is set to the spacebar.
 - **Window navigation shortcuts**: move between splits with `Ctrl+h`, `Ctrl+j`, `Ctrl+k`, and `Ctrl+l`.
+- **Line movement shortcuts**: move the current line or selected block up and down with leader-based mappings.
 
 ## Requirements
 
@@ -44,3 +44,7 @@ On first launch, the config will automatically clone `lazy.nvim` and install the
 | Normal | `Ctrl+j` | Move to the split below |
 | Normal | `Ctrl+k` | Move to the split above |
 | Normal | `Ctrl+l` | Move to the split on the right |
+| Normal | `<leader>j` | Move the current line down |
+| Normal | `<leader>k` | Move the current line up |
+| Visual | `<leader>j` | Move the selected block down |
+| Visual | `<leader>k` | Move the selected block up |
